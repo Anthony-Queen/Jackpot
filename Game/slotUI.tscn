@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://ci4557fqgca3k"]
 
 [ext_resource type="Texture2D" uid="uid://cm6tgecg6skfy" path="res://assets/Original/SlotUI.png" id="1_8dh5a"]
+[ext_resource type="Script" uid="uid://dir7j5dsp7uo7" path="res://Game/BigSlots.gd" id="2_i12ri"]
+[ext_resource type="Texture2D" uid="uid://wwhr8nstt3w3" path="res://assets/Original/SlotSymbolsSpritesheet.png" id="2_iaegc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8dh5a"]
 
@@ -35,6 +37,89 @@ offset_top = -0.032001495
 offset_right = -0.0980072
 offset_bottom = 0.13598633
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
+script = ExtResource("2_i12ri")
 
-[node name="ColorRect" type="ColorRect" parent="BIG1" unique_id=659848615]
-layout_mode = 2
+[node name="Sprite" type="Sprite2D" parent="BIG1" unique_id=8514456]
+position = Vector2(85, -408.99997)
+scale = Vector2(0.34760797, 0.2560312)
+texture = ExtResource("2_iaegc")
+
+[node name="BIG2" type="PanelContainer" parent="." unique_id=1507365282]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.038000003
+anchor_top = 0.034
+anchor_right = 0.289
+anchor_bottom = 0.293
+offset_left = 459.08398
+offset_top = -0.032001495
+offset_right = 458.90198
+offset_bottom = 0.13598633
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
+script = ExtResource("2_i12ri")
+
+[node name="Sprite" type="Sprite2D" parent="BIG2" unique_id=328720472]
+position = Vector2(85, -408.99997)
+scale = Vector2(0.34760797, 0.2560312)
+texture = ExtResource("2_iaegc")
+
+[node name="BigCenter" type="PanelContainer" parent="." unique_id=924231259]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.038000003
+anchor_top = 0.034
+anchor_right = 0.289
+anchor_bottom = 0.293
+offset_left = 0.08399773
+offset_top = 433.968
+offset_right = -0.0980072
+offset_bottom = 434.136
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
+script = ExtResource("2_i12ri")
+
+[node name="Sprite" type="Sprite2D" parent="BigCenter" unique_id=211412993]
+position = Vector2(85, -408.99997)
+scale = Vector2(0.34760797, 0.2560312)
+texture = ExtResource("2_iaegc")
+
+[node name="BIG3" type="PanelContainer" parent="." unique_id=142460833]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.038000003
+anchor_top = 0.034
+anchor_right = 0.289
+anchor_bottom = 0.293
+offset_left = 459.08398
+offset_top = 433.968
+offset_right = 458.90198
+offset_bottom = 434.136
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
+script = ExtResource("2_i12ri")
+
+[node name="Sprite" type="Sprite2D" parent="BIG3" unique_id=1251759498]
+position = Vector2(85, -408.99997)
+scale = Vector2(0.34760797, 0.2560312)
+texture = ExtResource("2_iaegc")
+
+[node name="BIG4" type="PanelContainer" parent="." unique_id=1361600937]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.038000003
+anchor_top = 0.034
+anchor_right = 0.289
+anchor_bottom = 0.293
+offset_left = 229.084
+offset_top = 216.968
+offset_right = 228.902
+offset_bottom = 217.13599
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
+script = ExtResource("2_i12ri")
+
+[node name="Sprite" type="Sprite2D" parent="BIG4" unique_id=2001206659]
+position = Vector2(85, -408.99997)
+scale = Vector2(0.34760797, 0.2560312)
+texture = ExtResource("2_iaegc")
