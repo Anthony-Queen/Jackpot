@@ -11,10 +11,10 @@ layout_mode = 3
 anchor_right = 0.592
 anchor_bottom = 1.0
 offset_top = 1.0
-offset_right = 0.015991211
+offset_right = 273.03198
 offset_bottom = 1.0
-grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_group_ = true
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1400455706]
 layout_mode = 1
@@ -47,7 +47,7 @@ scale = Vector2(0.34760797, 0.2560312)
 texture = ExtResource("2_iaegc")
 
 [node name="Sprite2" type="Sprite2D" parent="BIG1" unique_id=1994319748]
-position = Vector2(85, -598)
+position = Vector2(85, -1547.9999)
 scale = Vector2(0.34760797, 0.2560312)
 texture = ExtResource("2_iaegc")
 
@@ -59,10 +59,10 @@ anchor_left = 0.038000003
 anchor_top = 0.034
 anchor_right = 0.289
 anchor_bottom = 0.293
-offset_left = 459.08398
-offset_top = -0.032001495
-offset_right = 458.90198
-offset_bottom = 0.13598633
+offset_left = 455.35
+offset_top = 0.9679985
+offset_right = 455.16803
+offset_bottom = 1.1359863
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
 script = ExtResource("2_i12ri")
 
@@ -77,7 +77,32 @@ scale = Vector2(0.34760797, 0.2560312)
 texture = ExtResource("2_iaegc")
 metadata/_edit_group_ = true
 
-[node name="BigCenter" type="PanelContainer" parent="." unique_id=924231259]
+[node name="BigCenter" type="PanelContainer" parent="." unique_id=1361600937]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.038000003
+anchor_top = 0.034
+anchor_right = 0.289
+anchor_bottom = 0.293
+offset_left = 229.08401
+offset_top = 216.968
+offset_right = 228.902
+offset_bottom = 217.13599
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
+script = ExtResource("2_i12ri")
+
+[node name="Sprite" type="Sprite2D" parent="BigCenter" unique_id=2001206659]
+position = Vector2(85, -408.99997)
+scale = Vector2(0.34760797, 0.2560312)
+texture = ExtResource("2_iaegc")
+
+[node name="Sprite2" type="Sprite2D" parent="BigCenter" unique_id=649891866]
+position = Vector2(85, -1550.9999)
+scale = Vector2(0.34760797, 0.2560312)
+texture = ExtResource("2_iaegc")
+
+[node name="BIG3" type="PanelContainer" parent="." unique_id=924231259]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
@@ -90,13 +115,19 @@ offset_top = 433.968
 offset_right = -0.0980072
 offset_bottom = 434.136
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
+script = ExtResource("2_i12ri")
 
-[node name="Sprite" type="Sprite2D" parent="BigCenter" unique_id=211412993]
+[node name="Sprite" type="Sprite2D" parent="BIG3" unique_id=211412993]
 position = Vector2(85, -408.99997)
 scale = Vector2(0.34760797, 0.2560312)
 texture = ExtResource("2_iaegc")
 
-[node name="BIG3" type="PanelContainer" parent="." unique_id=142460833]
+[node name="Sprite2" type="Sprite2D" parent="BIG3" unique_id=297193407]
+position = Vector2(85, -1550.9999)
+scale = Vector2(0.34760797, 0.2560312)
+texture = ExtResource("2_iaegc")
+
+[node name="BIG4" type="PanelContainer" parent="." unique_id=142460833]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
@@ -109,27 +140,14 @@ offset_top = 433.968
 offset_right = 458.90198
 offset_bottom = 434.136
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
+script = ExtResource("2_i12ri")
 
-[node name="Sprite" type="Sprite2D" parent="BIG3" unique_id=1251759498]
+[node name="Sprite" type="Sprite2D" parent="BIG4" unique_id=1251759498]
 position = Vector2(85, -408.99997)
 scale = Vector2(0.34760797, 0.2560312)
 texture = ExtResource("2_iaegc")
 
-[node name="BIG4" type="PanelContainer" parent="." unique_id=1361600937]
-clip_contents = true
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.038000003
-anchor_top = 0.034
-anchor_right = 0.289
-anchor_bottom = 0.293
-offset_left = 229.084
-offset_top = 216.968
-offset_right = 228.902
-offset_bottom = 217.13599
-theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
-
-[node name="Sprite" type="Sprite2D" parent="BIG4" unique_id=2001206659]
-position = Vector2(85, -408.99997)
+[node name="Sprite2" type="Sprite2D" parent="BIG4" unique_id=1864317922]
+position = Vector2(85, -1550.9999)
 scale = Vector2(0.34760797, 0.2560312)
 texture = ExtResource("2_iaegc")
