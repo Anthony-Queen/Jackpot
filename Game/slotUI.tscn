@@ -15,7 +15,6 @@ offset_right = 0.015991211
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_group_ = true
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1400455706]
 layout_mode = 1
@@ -46,13 +45,11 @@ script = ExtResource("2_i12ri")
 position = Vector2(85, -408.99997)
 scale = Vector2(0.34760797, 0.2560312)
 texture = ExtResource("2_iaegc")
-metadata/_edit_group_ = true
 
 [node name="Sprite2" type="Sprite2D" parent="BIG1" unique_id=1994319748]
-position = Vector2(85, -1549)
+position = Vector2(85, -598)
 scale = Vector2(0.34760797, 0.2560312)
 texture = ExtResource("2_iaegc")
-metadata/_edit_group_ = true
 
 [node name="BIG2" type="PanelContainer" parent="." unique_id=1507365282]
 clip_contents = true
@@ -73,7 +70,6 @@ script = ExtResource("2_i12ri")
 position = Vector2(85, -408.99997)
 scale = Vector2(0.34760797, 0.2560312)
 texture = ExtResource("2_iaegc")
-metadata/_edit_group_ = true
 
 [node name="Sprite2" type="Sprite2D" parent="BIG2" unique_id=466342742]
 position = Vector2(85, -1550)

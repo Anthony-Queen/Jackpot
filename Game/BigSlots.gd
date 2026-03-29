@@ -1,10 +1,16 @@
 extends PanelContainer
 
-func _ready():
-	if $Sprite and $Sprite2:
-		spin()
+var speed := 2000
+var sprite_height := 4460
 
-func spin():
-	var tw = get_tree().create_tween()
-	tw.tween_property($Sprite, "position", Vector2(85, 600), 1)
-	tw.parallel().tween_property($Sprite2, "position", Vector2(85, 600), 1)
+func _process(delta):
+	$Sprite.position.y += speed * delta
+	$Sprite2.position.y += speed * delta
+	
+	if $Sprite.position.y >= sprite_height:
+		$Sprite.position.y = $Sprite2.position.y - sprite_height
+		print("Worky 1")
+	
+	if $Sprite2.position.y >= sprite_height:
+		$Sprite2.position.y = $Sprite.position.y - sprite_height
+		print("Worky 2")
