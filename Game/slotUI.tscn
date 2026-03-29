@@ -94,7 +94,6 @@ offset_top = 433.968
 offset_right = -0.0980072
 offset_bottom = 434.136
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
-script = ExtResource("2_i12ri")
 
 [node name="Sprite" type="Sprite2D" parent="BigCenter" unique_id=211412993]
 position = Vector2(85, -408.99997)
@@ -114,7 +113,6 @@ offset_top = 433.968
 offset_right = 458.90198
 offset_bottom = 434.136
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
-script = ExtResource("2_i12ri")
 
 [node name="Sprite" type="Sprite2D" parent="BIG3" unique_id=1251759498]
 position = Vector2(85, -408.99997)
@@ -134,7 +132,6 @@ offset_top = 216.968
 offset_right = 228.902
 offset_bottom = 217.13599
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
-script = ExtResource("2_i12ri")
 
 [node name="Sprite" type="Sprite2D" parent="BIG4" unique_id=2001206659]
 position = Vector2(85, -408.99997)
