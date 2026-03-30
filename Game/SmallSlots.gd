@@ -1,11 +1,24 @@
 extends PanelContainer
 
-#set_process(false) # Stops _process
-const speed : int = 2000
-const sprite_height : int = 1142
-const positions: Array = [] #Insert precise symbol coordinates
+const speed : int = 500
+const sprite_height : int = 628
 signal pressed
+# All Symbol Probabilities!!!!:
+const SYMBOLS = {
+	"seven":  Rect2(0.0, 3837.5, 552.0, 622.5),
+	"prugna": Rect2(0.0, 3233.8, 552.0, 589.3),
+	"bar":    Rect2(0.0, 2537.0, 552.0, 668.7),
+	"melon":  Rect2(0.0, 2017.7, 552.0, 408.3),
+	"bell":   Rect2(0.0, 1465.0, 552.0, 471.1),
+	"orange": Rect2(0.0, 968.1, 552.0, 424.5),
+	"cherry": Rect2(0.0, 390.2, 552.0, 486.6),
+	"lemon":  Rect2(0.0, 0.0, 552.0, 418.0)
+}
 
+
+
+func _ready():
+	pressed.connect(_on_pressed)
 
 func _process(delta):
 	$Sprite.position.y += speed * delta
