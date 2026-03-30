@@ -168,14 +168,16 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
 script = ExtResource("4_bo82o")
 
 [node name="Sprite" type="Sprite2D" parent="Small1" unique_id=1409737236]
-position = Vector2(50.00001, -228)
-scale = Vector2(0.17380399, 0.14103141)
+position = Vector2(1.0000038, -1.5258789e-05)
+scale = Vector2(93.999985, 88.000015)
 texture = ExtResource("2_iaegc")
+region_enabled = true
 
 [node name="Sprite2" type="Sprite2D" parent="Small1" unique_id=1067522328]
-position = Vector2(47.0301, -855)
-scale = Vector2(0.17380399, 0.14103141)
+position = Vector2(-1.0000029, -100.00001)
+scale = Vector2(94.999985, 93.000046)
 texture = ExtResource("2_iaegc")
+region_enabled = true
 
 [node name="Small2" type="PanelContainer" parent="." unique_id=1104813917]
 clip_contents = true
