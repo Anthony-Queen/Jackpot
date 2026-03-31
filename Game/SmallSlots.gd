@@ -8,14 +8,14 @@ signal pressed
 
 # All Symbol Stuff:
 const SYMBOLS = {
-	"seven":  Rect2(0.0, 3837.5, 552.0, 622.5),
-	"plum": Rect2(0.0, 3233.8, 552.0, 589.3),
-	"bar":    Rect2(0.0, 2537.0, 552.0, 668.7),
-	"melon":  Rect2(0.0, 2017.7, 552.0, 408.3),
-	"bell":   Rect2(0.0, 1465.0, 552.0, 471.1),
-	"orange": Rect2(0.0, 968.1, 552.0, 424.5),
-	"cherry": Rect2(0.0, 390.2, 552.0, 486.6),
-	"lemon":  Rect2(0.0, 0.0, 552.0, 418.0)
+	"seven":  3837,
+	"plum": 3234,
+	"bar":    2537,
+	"melon":  2017,
+	"bell":   1465,
+	"orange": 668,
+	"cherry": Vector2(0, 496),
+	"lemon":  0,
 }
 
 # More entries = Higher chance of getting picked
@@ -37,7 +37,7 @@ func _ready():
 func _process(delta):
 	$Sprite.position.y += speed * delta
 	$Sprite2.position.y += speed * delta
-	
+
 	if $Sprite.position.y >= sprite_height:
 		$Sprite.position.y = $Sprite2.position.y - sprite_height
 		currentSprite = $Sprite
@@ -49,9 +49,12 @@ func _input(event):
 	if event is InputEventKey and event.pressed and event.keycode in [KEY_ENTER, KEY_SPACE]:
 		pressed.emit()
 
-func _on_pressed():
-	if currentSprite == $Sprite:
-		$Sprite.position.y = SYMBOLS[chosenSymbol].position.y
-	else:
-		$Sprite2.position.y = SYMBOLS[chosenSymbol].position.y
+func _on_pressed(): # Cant set this position, cause THIS position only works on a rect, so instead its setting it to world coordinates
 	set_process(false)
+	if currentSprite == $Sprite:
+		$Sprite.position = SYMBOLS["cherry"]
+		print($Sprite.position)
+	else:
+		$Sprite2.position = SYMBOLS["cherry"] + Vector2(0, sprite_height)
+		print($Sprite2.position)
+#I fckng hate this
