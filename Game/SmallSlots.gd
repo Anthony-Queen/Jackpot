@@ -3,7 +3,7 @@ extends PanelContainer
 const speed : int = 500
 const sprite_height : int = 628
 var chosenSymbol
-var currentSprite
+@onready   var currentSprite = $Sprite
 signal pressed
 
 # All Symbol Stuff:
@@ -14,7 +14,7 @@ const SYMBOLS = {
 	"melon":  2017,
 	"bell":   1465,
 	"orange": 668,
-	"cherry": Vector2(0, 496),
+	"cherry": 496,
 	"lemon":  0,
 }
 
@@ -45,16 +45,14 @@ func _process(delta):
 		$Sprite2.position.y = $Sprite.position.y - sprite_height
 		currentSprite = $Sprite2
 
-func _input(event):
+func _input(event): 
 	if event is InputEventKey and event.pressed and event.keycode in [KEY_ENTER, KEY_SPACE]:
 		pressed.emit()
 
-func _on_pressed(): # Cant set this position, cause THIS position only works on a rect, so instead its setting it to world coordinates
+
+func _on_pressed() -> void: #Debugging rn cause this shit is so fkng ass
 	set_process(false)
 	if currentSprite == $Sprite:
-		$Sprite.position = SYMBOLS["cherry"]
-		print($Sprite.position)
+		pass
 	else:
-		$Sprite2.position = SYMBOLS["cherry"] + Vector2(0, sprite_height)
-		print($Sprite2.position)
-#I fckng hate this
+		pass
