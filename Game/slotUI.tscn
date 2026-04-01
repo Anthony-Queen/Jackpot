@@ -168,16 +168,18 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
 script = ExtResource("4_bo82o")
 
 [node name="Sprite" type="Sprite2D" parent="Small1" unique_id=1758869234]
-position = Vector2(46.69575, -228)
+position = Vector2(45.99999, 992.3616)
+scale = Vector2(0.18609023, 0.1412631)
+texture = ExtResource("2_iaegc")
+region_enabled = true
+region_rect = Rect2(0, 0, 532.832, 4700)
+
+[node name="Sprite2" type="Sprite2D" parent="Small1" unique_id=1762666549]
+position = Vector2(46.69575, 359.36145)
 scale = Vector2(0.17693867, 0.14313248)
 texture = ExtResource("2_iaegc")
 region_enabled = true
-region_rect = Rect2(0, 0, 560, 4423.161)
-
-[node name="Sprite2" type="Sprite2D" parent="Small1" unique_id=954088071]
-position = Vector2(46.00001, -859)
-scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+region_rect = Rect2(0, 0, 560, 4700)
 
 [node name="Small2" type="PanelContainer" parent="." unique_id=1104813917]
 clip_contents = true
@@ -194,15 +196,19 @@ offset_bottom = 0.024002075
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
 script = ExtResource("4_bo82o")
 
-[node name="Sprite" type="Sprite2D" parent="Small2" unique_id=1829717800]
-position = Vector2(47.0301, -226.49994)
-scale = Vector2(0.17380399, 0.14103141)
+[node name="Sprite" type="Sprite2D" parent="Small2" unique_id=220265766]
+position = Vector2(45.99999, 992.36145)
+scale = Vector2(0.18609023, 0.1412631)
 texture = ExtResource("2_iaegc")
+region_enabled = true
+region_rect = Rect2(0, 0, 532.832, 4700)
 
-[node name="Sprite2" type="Sprite2D" parent="Small2" unique_id=1167183345]
-position = Vector2(47.0301, -855)
-scale = Vector2(0.17380399, 0.14103141)
+[node name="Sprite2" type="Sprite2D" parent="Small2" unique_id=581228972]
+position = Vector2(46.69575, 359.36133)
+scale = Vector2(0.17693867, 0.14313248)
 texture = ExtResource("2_iaegc")
+region_enabled = true
+region_rect = Rect2(0, 0, 560, 4700)
 
 [node name="Small3" type="PanelContainer" parent="." unique_id=1644064667]
 clip_contents = true
@@ -219,15 +225,19 @@ offset_bottom = 0.06399536
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
 script = ExtResource("4_bo82o")
 
-[node name="Sprite" type="Sprite2D" parent="Small3" unique_id=204895700]
-position = Vector2(47.0301, -226.49994)
-scale = Vector2(0.17380399, 0.14103141)
+[node name="Sprite" type="Sprite2D" parent="Small3" unique_id=1509064298]
+position = Vector2(45.99999, 992.36145)
+scale = Vector2(0.18609023, 0.1412631)
 texture = ExtResource("2_iaegc")
+region_enabled = true
+region_rect = Rect2(0, 0, 532.832, 4700)
 
-[node name="Sprite2" type="Sprite2D" parent="Small3" unique_id=268910739]
-position = Vector2(47.0301, -855)
-scale = Vector2(0.17380399, 0.14103141)
+[node name="Sprite2" type="Sprite2D" parent="Small3" unique_id=1523744796]
+position = Vector2(46.69575, 359.36133)
+scale = Vector2(0.17693867, 0.14313248)
 texture = ExtResource("2_iaegc")
+region_enabled = true
+region_rect = Rect2(0, 0, 560, 4700)
 
 [node name="Small4" type="PanelContainer" parent="." unique_id=1588763306]
 clip_contents = true
@@ -244,15 +254,19 @@ offset_bottom = 0.06399536
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
 script = ExtResource("4_bo82o")
 
-[node name="Sprite" type="Sprite2D" parent="Small4" unique_id=1830128747]
-position = Vector2(47.0301, -226.49994)
-scale = Vector2(0.17380399, 0.14103141)
+[node name="Sprite" type="Sprite2D" parent="Small4" unique_id=1158084263]
+position = Vector2(45.99999, 992.36145)
+scale = Vector2(0.18609023, 0.1412631)
 texture = ExtResource("2_iaegc")
+region_enabled = true
+region_rect = Rect2(0, 0, 532.832, 4700)
 
-[node name="Sprite2" type="Sprite2D" parent="Small4" unique_id=2071429366]
-position = Vector2(47.0301, -855)
-scale = Vector2(0.17380399, 0.14103141)
+[node name="Sprite2" type="Sprite2D" parent="Small4" unique_id=595060111]
+position = Vector2(46.69575, 359.36133)
+scale = Vector2(0.17693867, 0.14313248)
 texture = ExtResource("2_iaegc")
+region_enabled = true
+region_rect = Rect2(0, 0, 560, 4700)
 
 [node name="Small5" type="PanelContainer" parent="." unique_id=336664347]
 clip_contents = true

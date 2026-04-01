@@ -1,6 +1,6 @@
 extends PanelContainer
 
-const speed : int = 500
+const speed : int = 2000
 const sprite_height : int = 628
 var chosenSymbol
 @onready   var currentSprite = $Sprite
@@ -8,14 +8,14 @@ signal pressed
 
 # All Symbol Stuff:
 const SYMBOLS = {
-	"seven":  Rect2(0, 50, 560, 4421),
-	"plum":   Rect2(0, -590, 560, 4421),
-	"bar":    Rect2(0, -1243, 560, 4421),
-	"melon":  Rect2(0, -1905, 560, 4421),
-	"bell":   Rect2(0, -2430, 560, 4421),
-	"orange": Rect2(0, -2935, 560, 4421),
-	"cherry": Rect2(0, -3465, 560, 4421),
-	"lemon":  Rect2(0, -3900, 560, 4421)
+	"seven":  Rect2(0, 3900, 560, 4700),
+	"plum":   Rect2(0, 3465, 560, 4700),
+	"bar":    Rect2(0, 2935, 560, 4700),
+	"melon":  Rect2(0, 2430, 560, 4700),
+	"bell":   Rect2(0, 1905, 560, 4700),
+	"orange": Rect2(0, 1243, 560, 4700),
+	"cherry": Rect2(0, 590, 560, 4700),
+	"lemon":  Rect2(0, 0, 560, 4700     )
 }  
 
 # More entries = Higher chance of getting picked
@@ -38,7 +38,7 @@ func _process(delta):
 	$Sprite.position.y += speed * delta
 	$Sprite2.position.y += speed * delta
 
-	if $Sprite.position.y >= sprite_height:
+	if $Sprite.position.y   >= sprite_height:
 		$Sprite.position.y = $Sprite2.position.y - sprite_height
 		currentSprite = $Sprite
 	if $Sprite2.position.y >= sprite_height:
@@ -51,9 +51,11 @@ func _input(event):
 
 
 func _on_pressed() -> void: #Debugging rn cause this shit is so fkng ass
-	set_process(false)
 	if currentSprite == $Sprite:
 		$Sprite.region_rect = SYMBOLS[chosenSymbol]
-		print($Sprite.region_rect, chosenSymbol)
+		print($Sprite.region_rect, chosenSymbol, SYMBOLS[chosenSymbol])
 	else:
-		print("Ur gay")
+		$Sprite2.region_rect = SYMBOLS[chosenSymbol]
+		print($Sprite2.region_rect, chosenSymbol, SYMBOLS[chosenSymbol])
+		print("Sprite2WOW")
+	set_process(false)
