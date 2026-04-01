@@ -8,15 +8,15 @@ signal pressed
 
 # All Symbol Stuff:
 const SYMBOLS = {
-	"seven":  3837,
-	"plum": 3234,
-	"bar":    2537,
-	"melon":  2017,
-	"bell":   1465,
-	"orange": 668,
-	"cherry": 496,
-	"lemon":  0,
-}
+	"seven":  Rect2(0, 50, 560, 4421),
+	"plum":   Rect2(0, -590, 560, 4421),
+	"bar":    Rect2(0, -1243, 560, 4421),
+	"melon":  Rect2(0, -1905, 560, 4421),
+	"bell":   Rect2(0, -2430, 560, 4421),
+	"orange": Rect2(0, -2935, 560, 4421),
+	"cherry": Rect2(0, -3465, 560, 4421),
+	"lemon":  Rect2(0, -3900, 560, 4421)
+}  
 
 # More entries = Higher chance of getting picked
 var reel = [
@@ -53,6 +53,7 @@ func _input(event):
 func _on_pressed() -> void: #Debugging rn cause this shit is so fkng ass
 	set_process(false)
 	if currentSprite == $Sprite:
-		pass
+		$Sprite.region_rect = SYMBOLS[chosenSymbol]
+		print($Sprite.region_rect, chosenSymbol)
 	else:
-		pass
+		print("Ur gay")

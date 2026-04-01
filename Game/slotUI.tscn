@@ -153,6 +153,7 @@ scale = Vector2(0.34760797, 0.2560312)
 texture = ExtResource("2_iaegc")
 
 [node name="Small1" type="PanelContainer" parent="." unique_id=1435674297]
+clip_contents = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.36100003
@@ -167,12 +168,14 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
 script = ExtResource("4_bo82o")
 
 [node name="Sprite" type="Sprite2D" parent="Small1" unique_id=1758869234]
-position = Vector2(47.0301, -226.49994)
-scale = Vector2(0.17380399, 0.14103141)
+position = Vector2(46.69575, -228)
+scale = Vector2(0.17693867, 0.14313248)
 texture = ExtResource("2_iaegc")
+region_enabled = true
+region_rect = Rect2(0, 0, 560, 4423.161)
 
 [node name="Sprite2" type="Sprite2D" parent="Small1" unique_id=954088071]
-position = Vector2(47.0301, -855)
+position = Vector2(46.00001, -859)
 scale = Vector2(0.17380399, 0.14103141)
 texture = ExtResource("2_iaegc")
 
