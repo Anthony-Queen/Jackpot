@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://ci4557fqgca3k"]
 
-[ext_resource type="Texture2D" uid="uid://cm6tgecg6skfy" path="res://assets/Original/SlotUI.png" id="1_8dh5a"]
-[ext_resource type="Script" uid="uid://dir7j5dsp7uo7" path="res://Game/BigSlots.gd" id="2_i12ri"]
-[ext_resource type="Texture2D" uid="uid://wwhr8nstt3w3" path="res://assets/Original/SlotSymbolsSpritesheet.png" id="2_iaegc"]
-[ext_resource type="Script" uid="uid://cx0mog2oq8p1x" path="res://Game/SmallSlots.gd" id="4_bo82o"]
+[ext_resource type="Script" uid="uid://djotvugtdcjru" path="res://Game/SlotUI.gd" id="1_l85ow"]
+[ext_resource type="Texture2D" uid="uid://cm6tgecg6skfy" path="res://assets/Original/SlotUI.png" id="2_r1miw"]
+[ext_resource type="Script" uid="uid://dir7j5dsp7uo7" path="res://Game/BigSlots.gd" id="3_1hwbn"]
+[ext_resource type="Texture2D" uid="uid://wwhr8nstt3w3" path="res://assets/Original/SlotSymbolsSpritesheet.png" id="4_ymcav"]
+[ext_resource type="Script" uid="uid://cx0mog2oq8p1x" path="res://Game/SmallSlots.gd" id="5_u6p6k"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8dh5a"]
 
@@ -15,6 +16,7 @@ offset_top = 1.0
 offset_right = 273.03198
 offset_bottom = 1.0
 grow_vertical = 2
+script = ExtResource("1_l85ow")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1400455706]
 layout_mode = 1
@@ -23,7 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 0.99500006
 offset_right = 1.0
 offset_bottom = 0.2399292
-texture = ExtResource("1_8dh5a")
+texture = ExtResource("2_r1miw")
 expand_mode = 1
 
 [node name="BIG1" type="PanelContainer" parent="." unique_id=1666524891]
@@ -39,118 +41,122 @@ offset_top = -0.032001495
 offset_right = -0.0980072
 offset_bottom = 0.13598633
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
-script = ExtResource("2_i12ri")
+script = ExtResource("3_1hwbn")
+slot_index = 1
 
 [node name="Sprite" type="Sprite2D" parent="BIG1" unique_id=8514456]
 position = Vector2(85, -408.99997)
 scale = Vector2(0.34760797, 0.2560312)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="BIG1" unique_id=1994319748]
 position = Vector2(85, -1547.9999)
 scale = Vector2(0.34760797, 0.2560312)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="BIG2" type="PanelContainer" parent="." unique_id=1507365282]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.038000003
-anchor_top = 0.034
-anchor_right = 0.289
-anchor_bottom = 0.293
-offset_left = 455.35
-offset_top = 0.9679985
-offset_right = 455.16803
-offset_bottom = 1.1359863
+anchor_left = 0.71800005
+anchor_top = 0.035
+anchor_right = 0.96300006
+anchor_bottom = 0.29500002
+offset_left = -3.6500244
+offset_top = 0.3199997
+offset_right = 0.21801758
+offset_bottom = -0.16000366
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
-script = ExtResource("2_i12ri")
+script = ExtResource("3_1hwbn")
+slot_index = 2
 
 [node name="Sprite" type="Sprite2D" parent="BIG2" unique_id=328720472]
 position = Vector2(85, -408.99997)
 scale = Vector2(0.34760797, 0.2560312)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="BIG2" unique_id=466342742]
 position = Vector2(85, -1550)
 scale = Vector2(0.34760797, 0.2560312)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 metadata/_edit_group_ = true
 
 [node name="BigCenter" type="PanelContainer" parent="." unique_id=1361600937]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.038000003
-anchor_top = 0.034
-anchor_right = 0.289
-anchor_bottom = 0.293
-offset_left = 229.08401
-offset_top = 216.968
-offset_right = 228.902
-offset_bottom = 217.13599
+anchor_left = 0.377
+anchor_top = 0.36900002
+anchor_right = 0.628
+anchor_bottom = 0.619
+offset_left = 0.2590027
+offset_top = -0.11201477
+offset_right = 0.07696533
+offset_bottom = 5.8880005
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
-script = ExtResource("2_i12ri")
+script = ExtResource("3_1hwbn")
 
 [node name="Sprite" type="Sprite2D" parent="BigCenter" unique_id=2001206659]
 position = Vector2(85, -408.99997)
 scale = Vector2(0.34760797, 0.2560312)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="BigCenter" unique_id=649891866]
 position = Vector2(85, -1550.9999)
 scale = Vector2(0.34760797, 0.2560312)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="BIG3" type="PanelContainer" parent="." unique_id=924231259]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.038000003
-anchor_top = 0.034
+anchor_top = 0.698
 anchor_right = 0.289
-anchor_bottom = 0.293
+anchor_bottom = 0.96300006
 offset_left = 0.08399773
-offset_top = 433.968
+offset_top = 3.695984
 offset_right = -0.0980072
-offset_bottom = 434.136
+offset_bottom = -0.024047852
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
-script = ExtResource("2_i12ri")
+script = ExtResource("3_1hwbn")
+slot_index = 3
 
 [node name="Sprite" type="Sprite2D" parent="BIG3" unique_id=211412993]
 position = Vector2(85, -408.99997)
 scale = Vector2(0.34760797, 0.2560312)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="BIG3" unique_id=297193407]
 position = Vector2(85, -1550.9999)
 scale = Vector2(0.34760797, 0.2560312)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="BIG4" type="PanelContainer" parent="." unique_id=142460833]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.038000003
-anchor_top = 0.034
-anchor_right = 0.289
-anchor_bottom = 0.293
-offset_left = 459.08398
-offset_top = 433.968
-offset_right = 458.90198
-offset_bottom = 434.136
+anchor_left = 0.71800005
+anchor_top = 0.70400006
+anchor_right = 0.96900004
+anchor_bottom = 0.96300006
+offset_left = 0.08395386
+offset_top = -0.19204712
+offset_right = -0.09802246
+offset_bottom = -0.024047852
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
-script = ExtResource("2_i12ri")
+script = ExtResource("3_1hwbn")
+slot_index = 4
 
 [node name="Sprite" type="Sprite2D" parent="BIG4" unique_id=1251759498]
 position = Vector2(85, -408.99997)
 scale = Vector2(0.34760797, 0.2560312)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="BIG4" unique_id=1864317922]
 position = Vector2(85, -1550.9999)
 scale = Vector2(0.34760797, 0.2560312)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Small1" type="PanelContainer" parent="." unique_id=1435674297]
 clip_contents = true
@@ -165,17 +171,18 @@ offset_top = 0.15200043
 offset_right = -0.17501831
 offset_bottom = 0.024002075
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
-script = ExtResource("4_bo82o")
+script = ExtResource("5_u6p6k")
+slot_index = 5
 
 [node name="Sprite" type="Sprite2D" parent="Small1" unique_id=1372279030]
 position = Vector2(47.0301, -226.49994)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="Small1" unique_id=85253442]
 position = Vector2(47.0301, -855)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Small2" type="PanelContainer" parent="." unique_id=1104813917]
 clip_contents = true
@@ -190,17 +197,18 @@ offset_top = -5.0320015
 offset_right = -2.7500305
 offset_bottom = 0.024002075
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
-script = ExtResource("4_bo82o")
+script = ExtResource("5_u6p6k")
+slot_index = 6
 
 [node name="Sprite" type="Sprite2D" parent="Small2" unique_id=846058776]
 position = Vector2(47.0301, -226.49994)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="Small2" unique_id=733255093]
 position = Vector2(47.0301, -855)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Small3" type="PanelContainer" parent="." unique_id=1644064667]
 clip_contents = true
@@ -215,17 +223,18 @@ offset_top = 0.19200134
 offset_right = 0.5
 offset_bottom = 0.06399536
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
-script = ExtResource("4_bo82o")
+script = ExtResource("5_u6p6k")
+slot_index = 7
 
 [node name="Sprite" type="Sprite2D" parent="Small3" unique_id=290899388]
 position = Vector2(47.0301, -226.49994)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="Small3" unique_id=230193823]
 position = Vector2(47.0301, -855)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Small4" type="PanelContainer" parent="." unique_id=1588763306]
 clip_contents = true
@@ -240,302 +249,327 @@ offset_top = 0.19200134
 offset_right = 0.6249695
 offset_bottom = 0.06399536
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
-script = ExtResource("4_bo82o")
+script = ExtResource("5_u6p6k")
+slot_index = 8
 
 [node name="Sprite" type="Sprite2D" parent="Small4" unique_id=1491078041]
 position = Vector2(47.0301, -226.49994)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="Small4" unique_id=2026302517]
 position = Vector2(47.0301, -855)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Small5" type="PanelContainer" parent="." unique_id=336664347]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.36100003
-anchor_top = 0.026
-anchor_right = 0.5
-anchor_bottom = 0.162
-offset_left = -228.67502
-offset_top = 218.15201
-offset_right = -227.5
-offset_bottom = 218.024
+anchor_left = 0.022000002
+anchor_top = 0.363
+anchor_right = 0.163
+anchor_bottom = 0.49800003
+offset_left = 0.14999866
+offset_top = -0.22399902
+offset_right = -0.025001526
+offset_bottom = 0.29599
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
+script = ExtResource("5_u6p6k")
+slot_index = 9
 
 [node name="Sprite" type="Sprite2D" parent="Small5" unique_id=1521800112]
 position = Vector2(47.0301, -226.49994)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="Small5" unique_id=1245792836]
 position = Vector2(47.0301, -855)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Small6" type="PanelContainer" parent="." unique_id=2022643856]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.51000005
-anchor_top = 0.034
-anchor_right = 0.65000004
-anchor_bottom = 0.162
-offset_left = -228.25003
-offset_top = 212.968
-offset_right = -234.75003
-offset_bottom = 218.024
+anchor_left = 0.172
+anchor_top = 0.363
+anchor_right = 0.30200002
+anchor_bottom = 0.483
+offset_left = -0.1000061
+offset_top = -0.22399902
+offset_right = 0.1499939
+offset_bottom = 10.015991
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
+script = ExtResource("5_u6p6k")
+slot_index = 10
 
 [node name="Sprite" type="Sprite2D" parent="Small6" unique_id=229114872]
 position = Vector2(47.0301, -226.49994)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="Small6" unique_id=1377280333]
 position = Vector2(47.0301, -855)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Small7" type="PanelContainer" parent="." unique_id=1259186095]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.36100003
-anchor_top = 0.171
-anchor_right = 0.5
-anchor_bottom = 0.307
-offset_left = -228.67502
-offset_top = 218.192
-offset_right = -227.5
-offset_bottom = 218.064
+anchor_left = 0.022000002
+anchor_top = 0.508
+anchor_right = 0.163
+anchor_bottom = 0.64400005
+offset_left = 0.14999866
+offset_top = -0.184021
+offset_right = -0.025001526
+offset_bottom = -0.31204224
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
+script = ExtResource("5_u6p6k")
+slot_index = 11
 
 [node name="Sprite" type="Sprite2D" parent="Small7" unique_id=255018013]
 position = Vector2(47.0301, -226.49994)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="Small7" unique_id=1975050593]
 position = Vector2(47.0301, -855)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Small8" type="PanelContainer" parent="." unique_id=1470050881]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.51000005
-anchor_top = 0.171
-anchor_right = 0.64000005
-anchor_bottom = 0.307
-offset_left = -228.25003
-offset_top = 218.192
-offset_right = -228.00003
-offset_bottom = 218.064
+anchor_left = 0.172
+anchor_top = 0.508
+anchor_right = 0.30200002
+anchor_bottom = 0.64400005
+offset_left = -0.1000061
+offset_top = -0.184021
+offset_right = 0.1499939
+offset_bottom = -0.31204224
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
+script = ExtResource("5_u6p6k")
+slot_index = 12
 
 [node name="Sprite" type="Sprite2D" parent="Small8" unique_id=1014871418]
 position = Vector2(47.0301, -226.49994)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="Small8" unique_id=890711749]
 position = Vector2(47.0301, -855)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Small9" type="PanelContainer" parent="." unique_id=2038876611]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.36100003
-anchor_top = 0.026
-anchor_right = 0.5
-anchor_bottom = 0.162
-offset_left = 226.32498
-offset_top = 218.15201
-offset_right = 227.5
-offset_bottom = 218.024
+anchor_left = 0.69500005
+anchor_top = 0.363
+anchor_right = 0.837
+anchor_bottom = 0.49800003
+offset_left = 0.8749695
+offset_top = -0.22399902
+offset_right = 0.024963379
+offset_bottom = 0.29599
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
+script = ExtResource("5_u6p6k")
+slot_index = 13
 
 [node name="Sprite" type="Sprite2D" parent="Small9" unique_id=653918292]
 position = Vector2(47.0301, -226.49994)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="Small9" unique_id=297416733]
 position = Vector2(47.0301, -855)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Small10" type="PanelContainer" parent="." unique_id=1160553203]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.51000005
-anchor_top = 0.034
-anchor_right = 0.65000004
-anchor_bottom = 0.162
-offset_left = 226.74997
-offset_top = 212.968
-offset_right = 220.24997
-offset_bottom = 218.024
+anchor_left = 0.845
+anchor_top = 0.36900002
+anchor_right = 0.9760001
+anchor_bottom = 0.5
+offset_left = 0.625
+offset_top = -4.112015
+offset_right = 0.19995117
+offset_bottom = -1.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
+script = ExtResource("5_u6p6k")
+slot_index = 14
 
 [node name="Sprite" type="Sprite2D" parent="Small10" unique_id=1085979860]
 position = Vector2(47.0301, -226.49994)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="Small10" unique_id=2107491353]
 position = Vector2(47.0301, -855)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Small11" type="PanelContainer" parent="." unique_id=1863197050]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.36100003
-anchor_top = 0.171
-anchor_right = 0.5
-anchor_bottom = 0.307
-offset_left = 226.32498
-offset_top = 218.192
-offset_right = 227.5
-offset_bottom = 218.064
+anchor_left = 0.69500005
+anchor_top = 0.508
+anchor_right = 0.837
+anchor_bottom = 0.64400005
+offset_left = 0.8749695
+offset_top = -0.184021
+offset_right = 0.024963379
+offset_bottom = -0.31204224
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
+script = ExtResource("5_u6p6k")
+slot_index = 15
 
 [node name="Sprite" type="Sprite2D" parent="Small11" unique_id=2000626643]
 position = Vector2(47.0301, -226.49994)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="Small11" unique_id=1118423983]
 position = Vector2(47.0301, -855)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Small12" type="PanelContainer" parent="." unique_id=1539431102]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.51000005
-anchor_top = 0.171
-anchor_right = 0.64000005
-anchor_bottom = 0.307
-offset_left = 226.74997
-offset_top = 218.192
-offset_right = 226.99997
-offset_bottom = 218.064
+anchor_left = 0.846
+anchor_top = 0.508
+anchor_right = 0.98100007
+anchor_bottom = 0.64400005
+offset_left = -0.049987793
+offset_top = -0.184021
+offset_right = -3.1750488
+offset_bottom = -0.31204224
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
+script = ExtResource("5_u6p6k")
+slot_index = 16
 
 [node name="Sprite" type="Sprite2D" parent="Small12" unique_id=265655933]
 position = Vector2(47.0301, -226.49994)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="Small12" unique_id=2085847869]
 position = Vector2(47.0301, -855)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Small13" type="PanelContainer" parent="." unique_id=1397928015]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.36100003
-anchor_top = 0.026
+anchor_left = 0.35900003
+anchor_top = 0.70400006
 anchor_right = 0.5
-anchor_bottom = 0.162
-offset_left = -0.6750183
-offset_top = 435.152
+anchor_bottom = 0.83300006
+offset_left = 0.6749878
+offset_top = -4.192047
 offset_right = 0.5
-offset_bottom = 435.024
+offset_bottom = 0.21594238
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
+script = ExtResource("5_u6p6k")
+slot_index = 17
 
 [node name="Sprite" type="Sprite2D" parent="Small13" unique_id=685681310]
 position = Vector2(47.0301, -226.49994)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="Small13" unique_id=1167161707]
 position = Vector2(47.0301, -855)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Small14" type="PanelContainer" parent="." unique_id=1915867075]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.51000005
-anchor_top = 0.034
-anchor_right = 0.65000004
-anchor_bottom = 0.162
+anchor_top = 0.698
+anchor_right = 0.64000005
+anchor_bottom = 0.83300006
 offset_left = -0.25003052
-offset_top = 429.968
-offset_right = -6.7500305
-offset_bottom = 435.024
+offset_top = -0.3040161
+offset_right = -3.0517578e-05
+offset_bottom = 0.21594238
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
+script = ExtResource("5_u6p6k")
+slot_index = 18
 
 [node name="Sprite" type="Sprite2D" parent="Small14" unique_id=424195536]
 position = Vector2(47.0301, -226.49994)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="Small14" unique_id=962346828]
 position = Vector2(47.0301, -855)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Small15" type="PanelContainer" parent="." unique_id=184710129]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.36100003
-anchor_top = 0.171
-anchor_right = 0.5
-anchor_bottom = 0.307
+anchor_top = 0.83300006
+anchor_right = 0.50200003
+anchor_bottom = 0.97800004
 offset_left = -0.6750183
-offset_top = 435.19202
-offset_right = 0.5
-offset_bottom = 435.064
+offset_top = 6.2159424
+offset_right = -0.8500366
+offset_bottom = 0.25598145
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
+script = ExtResource("5_u6p6k")
+slot_index = 19
 
 [node name="Sprite" type="Sprite2D" parent="Small15" unique_id=1183278366]
 position = Vector2(47.0301, -226.49994)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="Small15" unique_id=2056306378]
 position = Vector2(47.0301, -855)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Small16" type="PanelContainer" parent="." unique_id=1843714126]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.51000005
-anchor_top = 0.171
+anchor_top = 0.84300005
 anchor_right = 0.64000005
-anchor_bottom = 0.307
+anchor_bottom = 0.97800004
 offset_left = -0.25003052
-offset_top = 435.19202
+offset_top = -0.2640381
 offset_right = -3.0517578e-05
-offset_bottom = 435.064
+offset_bottom = 0.25598145
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
+script = ExtResource("5_u6p6k")
+slot_index = 20
 
 [node name="Sprite" type="Sprite2D" parent="Small16" unique_id=1833386661]
 position = Vector2(47.0301, -226.49994)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="Small16" unique_id=2009624565]
 position = Vector2(47.0301, -855)
 scale = Vector2(0.17380399, 0.14103141)
-texture = ExtResource("2_iaegc")
+texture = ExtResource("4_ymcav")

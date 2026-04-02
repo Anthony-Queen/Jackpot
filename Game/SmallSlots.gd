@@ -3,8 +3,8 @@ extends PanelContainer
 const speed : int = 2000
 const sprite_height : int = 628
 var chosenSymbol
-@onready   var currentSprite = $Sprite
-signal pressed
+@onready var currentSprite = $Sprite
+@export var slot_index: int
 
 # All Symbol Stuff:
 const SYMBOLS = {
@@ -20,23 +20,21 @@ const SYMBOLS = {
 
 # More entries = Higher chance of getting picked
 var reel = [
-	"cherry","cherry","cherry","cherry","cherry", "cherry", # 24%
-	"lemon","lemon","lemon","lemon", "lemon", # 20%
-	"orange","orange","orange", "orange", # 16%
-	"plum", "plum", "plum", # 12%
-	"melon","melon", "melon", # 12%
-	"bell", "bell", # 8%
+	"cherry","cherry","cherry","cherry","cherry","cherry", # 24%
+	"lemon","lemon","lemon","lemon","lemon", # 20%
+	"orange","orange","orange","orange",  # 16%
+	"plum","plum","plum", # 12%
+	"melon","melon","melon", # 12%
+	"bell","bell", # 8%
 	"bar", # 4%
-	"seven", # 4%
+	"seven" # 4%
 ]
 
-func _ready():
+func _ready() -> void:
 	chosenSymbol = reel.pick_random()
-	pressed.connect(_on_pressed)
+	Globals.pressed.connect(_on_pressed)
 
 func _process(delta):
-	print($Sprite2.position, "Sprite2")
-	print($Sprite.position, "Sprite1")
 	$Sprite.position.y += speed * delta
 	$Sprite2.position.y += speed * delta
 
@@ -49,15 +47,18 @@ func _process(delta):
 
 func _input(event): 
 	if event is InputEventKey and event.pressed and event.keycode in [KEY_ENTER, KEY_SPACE]:
-		pressed.emit()
-
+		Globals.pressed.emit()
 
 func _on_pressed() -> void:
 	set_process(false) 
 	if currentSprite == $Sprite:
 		$Sprite.position.y = SYMBOLS[chosenSymbol]
+		var id = Globals.SYMBOL_TO_ID[chosenSymbol]
+		Globals.update_slot(slot_index, id)
+		$Sprite2.visible = false
 		print($Sprite.position, chosenSymbol, SYMBOLS[chosenSymbol])
 		print($Sprite.position, "PressedSprite")
 	else:
+		$Sprite.visible = false
 		$Sprite2.position.y = SYMBOLS[chosenSymbol]
 		print($Sprite2.position, chosenSymbol, SYMBOLS[chosenSymbol]) 
