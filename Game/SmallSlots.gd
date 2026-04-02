@@ -8,15 +8,15 @@ signal pressed
 
 # All Symbol Stuff:
 const SYMBOLS = {
-	"seven":  Rect2(0, 3900, 560, 4700),
-	"plum":   Rect2(0, 3465, 560, 4700),
-	"bar":    Rect2(0, 2935, 560, 4700),
-	"melon":  Rect2(0, 2430, 560, 4700),
-	"bell":   Rect2(0, 1905, 560, 4700),
-	"orange": Rect2(0, 1243, 560, 4700),
-	"cherry": Rect2(0, 590, 560, 4700),
-	"lemon":  Rect2(0, 0, 560, 4700     )
-}  
+	"seven":  -226,
+	"plum":   -137,
+	"bar":    -46.5,
+	"melon":  45,
+	"bell":   118,
+	"orange": 192,
+	"cherry": 265,
+	"lemon":  332,
+	}  
 
 # More entries = Higher chance of getting picked
 var reel = [
@@ -35,6 +35,8 @@ func _ready():
 	pressed.connect(_on_pressed)
 
 func _process(delta):
+	print($Sprite2.position, "Sprite2")
+	print($Sprite.position, "Sprite1")
 	$Sprite.position.y += speed * delta
 	$Sprite2.position.y += speed * delta
 
@@ -50,12 +52,12 @@ func _input(event):
 		pressed.emit()
 
 
-func _on_pressed() -> void: #Debugging rn cause this shit is so fkng ass
+func _on_pressed() -> void:
+	set_process(false) 
 	if currentSprite == $Sprite:
-		$Sprite.region_rect = SYMBOLS[chosenSymbol]
-		print($Sprite.region_rect, chosenSymbol, SYMBOLS[chosenSymbol])
+		$Sprite.position.y = SYMBOLS[chosenSymbol]
+		print($Sprite.position, chosenSymbol, SYMBOLS[chosenSymbol])
+		print($Sprite.position, "PressedSprite")
 	else:
-		$Sprite2.region_rect = SYMBOLS[chosenSymbol]
-		print($Sprite2.region_rect, chosenSymbol, SYMBOLS[chosenSymbol])
-		print("Sprite2WOW")
-	set_process(false)
+		$Sprite2.position.y = SYMBOLS[chosenSymbol]
+		print($Sprite2.position, chosenSymbol, SYMBOLS[chosenSymbol]) 

@@ -157,29 +157,25 @@ clip_contents = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.36100003
-anchor_top = 0.034
-anchor_right = 0.492
+anchor_top = 0.026
+anchor_right = 0.50100005
 anchor_bottom = 0.162
 offset_left = 0.3249817
-offset_top = -5.0320015
-offset_right = -0.1000061
+offset_top = 0.15200043
+offset_right = -0.17501831
 offset_bottom = 0.024002075
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
 script = ExtResource("4_bo82o")
 
-[node name="Sprite" type="Sprite2D" parent="Small1" unique_id=1758869234]
-position = Vector2(45.99999, 992.3616)
-scale = Vector2(0.18609023, 0.1412631)
+[node name="Sprite" type="Sprite2D" parent="Small1" unique_id=1372279030]
+position = Vector2(47.0301, -226.49994)
+scale = Vector2(0.17380399, 0.14103141)
 texture = ExtResource("2_iaegc")
-region_enabled = true
-region_rect = Rect2(0, 0, 532.832, 4700)
 
-[node name="Sprite2" type="Sprite2D" parent="Small1" unique_id=1762666549]
-position = Vector2(46.69575, 359.36145)
-scale = Vector2(0.17693867, 0.14313248)
+[node name="Sprite2" type="Sprite2D" parent="Small1" unique_id=85253442]
+position = Vector2(47.0301, -855)
+scale = Vector2(0.17380399, 0.14103141)
 texture = ExtResource("2_iaegc")
-region_enabled = true
-region_rect = Rect2(0, 0, 560, 4700)
 
 [node name="Small2" type="PanelContainer" parent="." unique_id=1104813917]
 clip_contents = true
@@ -191,24 +187,20 @@ anchor_right = 0.65000004
 anchor_bottom = 0.162
 offset_left = -0.25003052
 offset_top = -5.0320015
-offset_right = -6.7500305
+offset_right = -2.7500305
 offset_bottom = 0.024002075
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
 script = ExtResource("4_bo82o")
 
-[node name="Sprite" type="Sprite2D" parent="Small2" unique_id=220265766]
-position = Vector2(45.99999, 992.36145)
-scale = Vector2(0.18609023, 0.1412631)
+[node name="Sprite" type="Sprite2D" parent="Small2" unique_id=846058776]
+position = Vector2(47.0301, -226.49994)
+scale = Vector2(0.17380399, 0.14103141)
 texture = ExtResource("2_iaegc")
-region_enabled = true
-region_rect = Rect2(0, 0, 532.832, 4700)
 
-[node name="Sprite2" type="Sprite2D" parent="Small2" unique_id=581228972]
-position = Vector2(46.69575, 359.36133)
-scale = Vector2(0.17693867, 0.14313248)
+[node name="Sprite2" type="Sprite2D" parent="Small2" unique_id=733255093]
+position = Vector2(47.0301, -855)
+scale = Vector2(0.17380399, 0.14103141)
 texture = ExtResource("2_iaegc")
-region_enabled = true
-region_rect = Rect2(0, 0, 560, 4700)
 
 [node name="Small3" type="PanelContainer" parent="." unique_id=1644064667]
 clip_contents = true
@@ -225,19 +217,15 @@ offset_bottom = 0.06399536
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
 script = ExtResource("4_bo82o")
 
-[node name="Sprite" type="Sprite2D" parent="Small3" unique_id=1509064298]
-position = Vector2(45.99999, 992.36145)
-scale = Vector2(0.18609023, 0.1412631)
+[node name="Sprite" type="Sprite2D" parent="Small3" unique_id=290899388]
+position = Vector2(47.0301, -226.49994)
+scale = Vector2(0.17380399, 0.14103141)
 texture = ExtResource("2_iaegc")
-region_enabled = true
-region_rect = Rect2(0, 0, 532.832, 4700)
 
-[node name="Sprite2" type="Sprite2D" parent="Small3" unique_id=1523744796]
-position = Vector2(46.69575, 359.36133)
-scale = Vector2(0.17693867, 0.14313248)
+[node name="Sprite2" type="Sprite2D" parent="Small3" unique_id=230193823]
+position = Vector2(47.0301, -855)
+scale = Vector2(0.17380399, 0.14103141)
 texture = ExtResource("2_iaegc")
-region_enabled = true
-region_rect = Rect2(0, 0, 560, 4700)
 
 [node name="Small4" type="PanelContainer" parent="." unique_id=1588763306]
 clip_contents = true
@@ -245,28 +233,24 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.51000005
 anchor_top = 0.171
-anchor_right = 0.64000005
+anchor_right = 0.64500004
 anchor_bottom = 0.307
 offset_left = -0.25003052
 offset_top = 0.19200134
-offset_right = -3.0517578e-05
+offset_right = 0.6249695
 offset_bottom = 0.06399536
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
 script = ExtResource("4_bo82o")
 
-[node name="Sprite" type="Sprite2D" parent="Small4" unique_id=1158084263]
-position = Vector2(45.99999, 992.36145)
-scale = Vector2(0.18609023, 0.1412631)
+[node name="Sprite" type="Sprite2D" parent="Small4" unique_id=1491078041]
+position = Vector2(47.0301, -226.49994)
+scale = Vector2(0.17380399, 0.14103141)
 texture = ExtResource("2_iaegc")
-region_enabled = true
-region_rect = Rect2(0, 0, 532.832, 4700)
 
-[node name="Sprite2" type="Sprite2D" parent="Small4" unique_id=595060111]
-position = Vector2(46.69575, 359.36133)
-scale = Vector2(0.17693867, 0.14313248)
+[node name="Sprite2" type="Sprite2D" parent="Small4" unique_id=2026302517]
+position = Vector2(47.0301, -855)
+scale = Vector2(0.17380399, 0.14103141)
 texture = ExtResource("2_iaegc")
-region_enabled = true
-region_rect = Rect2(0, 0, 560, 4700)
 
 [node name="Small5" type="PanelContainer" parent="." unique_id=336664347]
 clip_contents = true
