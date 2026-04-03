@@ -9,7 +9,7 @@ var SmallSlots3: Array = [0, 0, 0, 0]
 var SmallSlots4: Array = [0, 0, 0, 0]
 var grid: Array = [BigSlots, SmallSlots1, SmallSlots2, SmallSlots3, SmallSlots4]
 
-const SYMBOL_TO_ID = {
+const SYMBOL_TO_ID = { # Converts symbol to number which is then put in the Array
 	"seven":  0,
 	"bar":    1,
 	"bell":   2,
@@ -20,9 +20,10 @@ const SYMBOL_TO_ID = {
 	"lemon":  7
 }
 
+@warning_ignore("unused_signal")
 signal pressed
 
-func update_slot(slot_index: int, symbolId: int) -> void: #This isnt act working code but it's very much a start
+func update_slot(slot_index: int, symbolId: int) -> void: #This updates the array with the actual symbol on the slots
 	if slot_index == 0:
 		grid[0][2] = symbolId #This isn't zero cause its in the middle, just for more readability
 	elif slot_index == 1:
@@ -70,3 +71,8 @@ func update_slot(slot_index: int, symbolId: int) -> void: #This isnt act working
 		grid[4][2] = symbolId
 	elif slot_index == 20:
 		grid[4][3] = symbolId
+
+func check_horizontal_win_3(): #HOW TF DO I DO THIS WITHOUT USING 3000 IF STATEMENTSSSSSS
+	#if grid has 3 same symbols touching:
+		#add_coins 
+	pass

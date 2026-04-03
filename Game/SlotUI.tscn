@@ -10,11 +10,11 @@
 
 [node name="Slot" type="Control" unique_id=371250647]
 layout_mode = 3
-anchor_right = 0.592
+anchor_top = 0.002
+anchor_right = 0.994
 anchor_bottom = 1.0
-offset_top = 1.0
-offset_right = 273.03198
-offset_bottom = 1.0
+offset_top = -1.296
+offset_right = 0.07397461
 grow_vertical = 2
 script = ExtResource("1_l85ow")
 
