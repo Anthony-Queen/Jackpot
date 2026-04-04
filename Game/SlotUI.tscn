@@ -478,10 +478,8 @@ anchor_left = 0.69900006
 anchor_top = 0.36
 anchor_right = 0.97300005
 anchor_bottom = 0.64400005
-offset_left = 0.17495728
-offset_top = -0.28001404
-offset_right = 0.22497559
-offset_bottom = -0.31204224
+offset_left = 1.0
+offset_right = 1.0
 pivot_offset = Vector2(98, 92.79)
 columns = 2
 script = ExtResource("6_r1miw")
@@ -517,13 +515,13 @@ slot_index = 14
 
 [node name="Sprite" type="Sprite2D" parent="Small9-12/Small10" unique_id=2121698149]
 z_index = 1
-position = Vector2(56.969925, -226.99988)
+position = Vector2(53.14485, -225.2799)
 scale = Vector2(0.17380399, 0.14103141)
 texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="Small9-12/Small10" unique_id=304105012]
 z_index = 1
-position = Vector2(56.969925, -855.49994)
+position = Vector2(53.14485, -853.77997)
 scale = Vector2(0.17380399, 0.14103141)
 texture = ExtResource("4_ymcav")
 
@@ -553,11 +551,11 @@ script = ExtResource("5_u6p6k")
 slot_index = 16
 
 [node name="Sprite" type="Sprite2D" parent="Small9-12/Small12" unique_id=996666242]
-position = Vector2(55.969925, -222.99988)
+position = Vector2(52.14485, -226.2799)
 scale = Vector2(0.17380399, 0.14103141)
 texture = ExtResource("4_ymcav")
 
 [node name="Sprite2" type="Sprite2D" parent="Small9-12/Small12" unique_id=592785355]
-position = Vector2(55.969925, -851.49994)
+position = Vector2(52.14485, -854.77997)
 scale = Vector2(0.17380399, 0.14103141)
 texture = ExtResource("4_ymcav")
