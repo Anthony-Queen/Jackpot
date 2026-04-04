@@ -20,8 +20,10 @@ const SYMBOL_TO_ID = { # Converts symbol to number which is then put in the Arra
 	"lemon":  7
 }
 
-@warning_ignore("unused_signal")
+@warning_ignore_start("unused_signal")
 signal pressed
+signal rotated
+@warning_ignore_restore("unused_signal")
 
 func update_slot(slot_index: int, symbolId: int) -> void: #This updates the array with the actual symbol on the slots
 	if slot_index == 0:
