@@ -35,7 +35,7 @@ var reel = [
 func _ready() -> void:
 	chosenSymbol = reel.pick_random()
 	Globals.pressed.connect(_on_pressed)
-	Globals.rotated.connect(_on_rotated)
+	#Globals.rotated.connect(_on_rotated)
 
 
 func _process(delta):
@@ -67,6 +67,8 @@ func _on_pressed():
 		var id = Globals.SYMBOL_TO_ID[chosenSymbol]
 		Globals.update_slot(slot_index, id)
 		Sprite.visible = false
-
+"
 func _on_rotated():
-	rotation_degrees -= 90
+	Sprite.rotation_degrees = 90
+	Sprite2.rotation_degrees = 90
+"
