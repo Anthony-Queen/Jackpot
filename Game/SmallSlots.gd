@@ -67,8 +67,3 @@ func _on_pressed():
 		var id = Globals.SYMBOL_TO_ID[chosenSymbol]
 		Globals.update_slot(slot_index, id)
 		Sprite.visible = false
-"
-func _on_rotated():
-	Sprite.rotation_degrees = 90
-	Sprite2.rotation_degrees = 90
-"

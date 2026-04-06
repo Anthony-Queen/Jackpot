@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://ci4557fqgca3k"]
 
-[ext_resource type="Script" uid="uid://djotvugtdcjru" path="res://Game/SlotUI.gd" id="1_l85ow"]
 [ext_resource type="Texture2D" uid="uid://cm6tgecg6skfy" path="res://assets/Original/SlotUI.png" id="2_r1miw"]
 [ext_resource type="Script" uid="uid://dir7j5dsp7uo7" path="res://Game/BigSlots.gd" id="3_1hwbn"]
 [ext_resource type="Texture2D" uid="uid://wwhr8nstt3w3" path="res://assets/Original/SlotSymbolsSpritesheet.png" id="4_ymcav"]
@@ -20,7 +19,6 @@ anchor_bottom = 1.0
 offset_top = -1.296
 offset_right = 0.07397461
 grow_vertical = 2
-script = ExtResource("1_l85ow")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1400455706]
 layout_mode = 1
