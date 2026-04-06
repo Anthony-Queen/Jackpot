@@ -4,9 +4,8 @@ extends GridContainer
 @onready var Small3 = $Small15
 @onready var Small4 = $Small16
 
-
 func _input(event):
-	if event.is_action_pressed("Right"):
+	if event.is_action_pressed("Down"):
 		rotate()
 
 func rotate():

@@ -6,7 +6,7 @@ extends GridContainer
 
 
 func _input(event):
-	if event.is_action_pressed("Right"):
+	if event.is_action_pressed("Left"):
 		rotate()
 
 func rotate():
