@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://ci4557fqgca3k"]
 
 [ext_resource type="Texture2D" uid="uid://cm6tgecg6skfy" path="res://assets/Original/SlotUI.png" id="2_r1miw"]
+[ext_resource type="Texture2D" uid="uid://bmn4ujhl2qsjc" path="res://assets/Original/SlotPrizes.png" id="2_u6p6k"]
 [ext_resource type="Script" uid="uid://dir7j5dsp7uo7" path="res://Game/BigSlots.gd" id="3_1hwbn"]
+[ext_resource type="Script" uid="uid://dkgcd13f5565c" path="res://Game/Coins.gd" id="3_ysvah"]
 [ext_resource type="Texture2D" uid="uid://wwhr8nstt3w3" path="res://assets/Original/SlotSymbolsSpritesheet.png" id="4_ymcav"]
 [ext_resource type="Script" uid="uid://dribejyvldyq7" path="res://Game/SmallContainer1-4.gd" id="5_1hwbn"]
 [ext_resource type="Script" uid="uid://cx0mog2oq8p1x" path="res://Game/SmallSlots.gd" id="5_u6p6k"]
@@ -9,26 +11,86 @@
 [ext_resource type="Script" uid="uid://bje7b2h4mnoka" path="res://Game/SmallContainer5-8.gd" id="7_ymcav"]
 [ext_resource type="Script" uid="uid://jli84hlesjx8" path="res://Game/SmallContainer13-16.gd" id="8_u6p6k"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u6p6k"]
+bg_color = Color(0, 0, 0, 1)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8dh5a"]
 
 [node name="Slot" type="Control" unique_id=371250647]
 layout_mode = 3
 anchor_top = 0.002
-anchor_right = 0.994
+anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -1.296
-offset_right = 0.07397461
+offset_bottom = -265.0
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1400455706]
+[node name="SlotMachine" type="TextureRect" parent="." unique_id=1400455706]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.99500006
-offset_right = 1.0
-offset_bottom = 0.2399292
+offset_bottom = 3.373413
 texture = ExtResource("2_r1miw")
 expand_mode = 1
+
+[node name="Prizes" type="NinePatchRect" parent="." unique_id=558096682]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0380001
+anchor_right = 1.0
+anchor_bottom = 1.4380001
+offset_top = 5.102661
+offset_bottom = 1.0786743
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_u6p6k")
+region_rect = Rect2(0, 2.8500366, 892, 314.14996)
+patch_margin_left = 8
+patch_margin_right = 8
+
+[node name="Coins" type="Panel" parent="." unique_id=389125372]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0380001
+offset_bottom = 5.102661
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u6p6k")
+script = ExtResource("3_ysvah")
+
+[node name="Label" type="Label" parent="Coins" unique_id=2049106450]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.038000003
+anchor_top = 0.006
+anchor_right = 0.71300006
+anchor_bottom = 1.0
+offset_left = 0.19799805
+offset_top = -0.13797711
+offset_right = -0.12704468
+grow_horizontal = 2
+grow_vertical = 2
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Coins" unique_id=1619260921]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.72800004
+anchor_top = 0.006
+anchor_right = 0.9990001
+anchor_bottom = 0.96700007
+offset_left = -0.31204224
+offset_top = -0.13801669
+offset_right = -0.32104492
+offset_bottom = 0.7589817
+grow_horizontal = 2
+grow_vertical = 2
+text = "Cost per Play: 10 Coins"
+vertical_alignment = 1
 
 [node name="BIG1" type="PanelContainer" parent="." unique_id=1666524891]
 clip_contents = true
@@ -142,9 +204,9 @@ anchor_left = 0.71800005
 anchor_top = 0.70400006
 anchor_right = 0.96900004
 anchor_bottom = 0.96300006
-offset_left = 0.08395386
+offset_left = -3.6500244
 offset_top = -0.19204712
-offset_right = -0.09802246
+offset_right = -3.8319702
 offset_bottom = -0.024047852
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8dh5a")
 script = ExtResource("3_1hwbn")
@@ -161,16 +223,11 @@ scale = Vector2(0.34760797, 0.2560312)
 texture = ExtResource("4_ymcav")
 
 [node name="Small1-4" type="GridContainer" parent="." unique_id=312022484]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.36
-anchor_top = 0.025
-anchor_right = 0.646
-anchor_bottom = 0.30900002
-offset_left = -8.000015
-offset_top = -0.20000076
-offset_right = -0.05001831
-offset_bottom = -0.19996643
+layout_mode = 0
+offset_left = 239.0
+offset_top = 4.5599995
+offset_right = 435.0
+offset_bottom = 188.56
 pivot_offset = Vector2(98, 92.79)
 columns = 2
 script = ExtResource("5_1hwbn")
@@ -255,13 +312,13 @@ texture = ExtResource("4_ymcav")
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.009000001
-anchor_top = 0.356
-anchor_right = 0.305
-anchor_bottom = 0.64000005
-offset_left = 8.924999
-offset_top = 0.34403992
-offset_right = 3.125
-offset_bottom = 0.31201172
+anchor_top = 0.354
+anchor_right = 0.30800003
+anchor_bottom = 0.657
+offset_left = -0.11100054
+offset_top = 0.25375366
+offset_right = -0.13201904
+offset_bottom = 1.6780701
 pivot_offset = Vector2(98, 92.79)
 columns = 2
 script = ExtResource("7_ymcav")
@@ -297,7 +354,7 @@ slot_index = 10
 
 [node name="Sprite" type="Sprite2D" parent="Small5-8/Small6" unique_id=1703688813]
 z_index = 1
-position = Vector2(53.14485, -225.2799)
+position = Vector2(61, -225.2799)
 scale = Vector2(0.17380399, 0.14103141)
 texture = ExtResource("4_ymcav")
 
@@ -343,16 +400,11 @@ scale = Vector2(0.17380399, 0.14103141)
 texture = ExtResource("4_ymcav")
 
 [node name="Small9-12" type="GridContainer" parent="." unique_id=1613236539]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.69900006
-anchor_top = 0.36
-anchor_right = 0.97300005
-anchor_bottom = 0.64400005
-offset_left = -7.8250427
-offset_top = -3.280014
-offset_right = 7.2249756
-offset_bottom = -3.2799988
+layout_mode = 0
+offset_left = 471.0
+offset_top = 208.56
+offset_right = 665.0
+offset_bottom = 392.56
 pivot_offset = Vector2(98, 92.79)
 columns = 2
 script = ExtResource("6_r1miw")
@@ -434,16 +486,11 @@ scale = Vector2(0.17380399, 0.14103141)
 texture = ExtResource("4_ymcav")
 
 [node name="Small13-16" type="GridContainer" parent="." unique_id=2134108433]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.35000002
-anchor_top = 0.69000006
-anchor_right = 0.646
-anchor_bottom = 0.97400004
-offset_left = -0.25001526
-offset_top = -0.120025635
-offset_right = -0.05001831
-offset_bottom = -0.11999512
+layout_mode = 0
+offset_left = 242.0
+offset_top = 410.56
+offset_right = 438.0
+offset_bottom = 594.56
 pivot_offset = Vector2(98, 92.79)
 columns = 2
 script = ExtResource("8_u6p6k")

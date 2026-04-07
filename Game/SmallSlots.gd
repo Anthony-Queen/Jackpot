@@ -11,7 +11,7 @@ var chosenSymbol
 # All Symbol Stuff:
 const SYMBOLS = {
 	"seven":  -226,
-	"plum":   -137,
+	#"plum":   -137,
 	"bar":    -46.5,
 	"melon":  45,
 	"bell":   118,
@@ -25,9 +25,9 @@ var reel = [
 	"cherry","cherry","cherry","cherry","cherry","cherry", # 24%
 	"lemon","lemon","lemon","lemon","lemon", # 20%
 	"orange","orange","orange","orange",  # 16%
-	"plum","plum","plum", # 12%
+	#"plum","plum","plum", # 12%
 	"melon","melon","melon", # 12%
-	"bell","bell", # 8%
+	"bell", # 4%%
 	"bar", # 4%
 	"seven" # 4%
 ]
@@ -55,15 +55,13 @@ func _input(event):
 
 func _on_pressed():
 	set_process(false)
+	currentSprite.visible = true
+	currentSprite.position.y = SYMBOLS[chosenSymbol]
+
+	var id = Globals.SYMBOL_TO_ID[chosenSymbol]
+	Globals.update_slot(slot_index, id)
+
 	if currentSprite == Sprite:
-		Sprite.visible = true
-		Sprite.position.y = SYMBOLS[chosenSymbol]
-		var id = Globals.SYMBOL_TO_ID[chosenSymbol]
-		Globals.update_slot(slot_index, id)
 		Sprite2.visible = false
 	else:
-		Sprite2.visible = true
-		Sprite2.position.y = SYMBOLS[chosenSymbol]
-		var id = Globals.SYMBOL_TO_ID[chosenSymbol]
-		Globals.update_slot(slot_index, id)
 		Sprite.visible = false

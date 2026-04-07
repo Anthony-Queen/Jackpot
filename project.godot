@@ -22,6 +22,7 @@ Globals="*uid://bshctf13x5jjj"
 [display]
 
 window/size/viewport_width=679
+window/size/viewport_height=868
 
 [editor_plugins]
 

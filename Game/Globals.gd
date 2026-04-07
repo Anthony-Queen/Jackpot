@@ -150,7 +150,6 @@ func check_horizontal_win():
 			else:
 				coins += PAYOUTS[grid[5][1]][3]
 
-
 func check_vertical_win():
 	# First Column
 	if grid[2][0] == grid[3][0]:
@@ -210,4 +209,4 @@ func check_diagonal_wins():
 	if grid[0][0] == grid[2][2] and grid[2][2] == grid[5][3] or grid[0][3] == grid[2][2] and grid[2][2] == grid[5][0]:
 		coins += PAYOUTS[grid[0][0][5]] * 10
 	if grid[0][0] == grid[2][2] == grid[5][3] == grid[0][3] == grid[5][0]:
-		coins += PAYOUTS[grid[0][0][5]] * 1000
+		coins += PAYOUTS[grid[0][0][5]] * 100
