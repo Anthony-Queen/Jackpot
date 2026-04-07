@@ -11,21 +11,21 @@ var chosenSymbol
 # All Symbol Stuff:
 const SYMBOLS = {
 	"seven":  -226,
-	#"plum":   -137,
+	"plum":   -137,
 	"bar":    -46.5,
 	"melon":  45,
 	"bell":   118,
 	"orange": 192,
 	"cherry": 265,
-	"lemon":  332,
+	#"lemon":  332,
 	}  
 
 # More entries = Higher chance of getting picked
 var reel = [
 	"cherry","cherry","cherry","cherry","cherry","cherry", # 24%
-	"lemon","lemon","lemon","lemon","lemon", # 20%
+	#"lemon","lemon","lemon","lemon","lemon", # 20%
 	"orange","orange","orange","orange",  # 16%
-	#"plum","plum","plum", # 12%
+	"plum","plum","plum", # 12%
 	"melon","melon","melon", # 12%
 	"bell", # 4%%
 	"bar", # 4%

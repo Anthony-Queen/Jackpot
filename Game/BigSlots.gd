@@ -11,21 +11,21 @@ var chosenSymbol
 # All Symbol Stuff:
 const SYMBOLS = {
 	"seven":  -409,
-	#"plum":   -244,
+	"plum":   -244,
 	"bar":    -81,
 	"melon":  83,
 	"bell":   217,
 	"orange": 360,
 	"cherry": 490,
-	"lemon":  602,
+	#"lemon":  602,
 	}  
 
 # More entries = Higher chance of getting picked
 var reel = [
 	"cherry","cherry","cherry","cherry","cherry","cherry", # 24%
-	"lemon","lemon","lemon","lemon","lemon", # 20%
+	#"lemon","lemon","lemon","lemon","lemon", # 20%
 	"orange","orange","orange","orange",  # 16%
-	#"plum","plum","plum", # 12%
+	"plum","plum","plum", # 12%
 	"melon","melon","melon", # 12%
 	"bell","bell", # 8%
 	"bar", # 4%
@@ -48,6 +48,7 @@ func _process(delta):
 
 func _input(event): 
 	if event is InputEventKey and event.pressed and event.keycode == KEY_ENTER:
+		Globals.canMove = false
 		_on_pressed()
 
 func _on_pressed():
@@ -62,3 +63,8 @@ func _on_pressed():
 		Sprite2.visible = false
 	else:
 		Sprite.visible = false
+
+	Globals.spins += 1
+	if Globals.spins == 5:
+		Globals.check_wins()
+		print("Checked!")

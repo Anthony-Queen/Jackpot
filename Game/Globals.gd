@@ -8,6 +8,9 @@ var Line5: Array = ["BIG", "SMALL", "SMALL", "BIG"]
 var Line6: Array = ["BIG", "SMALL", "SMALL", "BIG"]
 var grid: Array = [Line1, Line2, Line3, Line4, Line5, Line6]
 var coins = 100 
+var canMove: bool = true
+var spins: int = 0
+
 
 const SYMBOL_TO_ID = { # Converts symbol to number which is then put in the Array
 	"seven":  7,
@@ -17,19 +20,19 @@ const SYMBOL_TO_ID = { # Converts symbol to number which is then put in the Arra
 	"plum":   3,
 	"orange": 2,
 	"cherry": 1,
-	"lemon":  0
+	#"lemon":  0
 }
 
 # Symbol, RowWin: coins
 const PAYOUTS = {  
-	0: {3: 5,  4: 10, 5: 20,},
-	1: {3: 6,  4: 12, 5: 25},
-	2: {3: 8,  4: 16, 5: 40},
-	3: {3: 10, 4: 20, 5: 60},
-	4: {3: 12, 4: 25, 5: 80},
-	5: {3: 15, 4: 30, 5: 120},
-	6: {3: 20, 4: 50, 5: 200},
-	7: {3: 50, 4: 200,5: 1000}
+	#0: {3: 3, 4: 5, 5: 10,},
+	1: {3: 3, 4: 5, 5: 10},
+	2: {3: 5, 4: 10, 5: 20},
+	3: {3: 10, 4: 20, 5: 40},
+	4: {3: 20, 4: 20, 5: 80},
+	5: {3: 30, 4: 60, 5: 120},
+	6: {3: 50, 4: 100, 5: 200},
+	7: {3: 100, 4: 250,5: 1000}
 }
 
 @warning_ignore_start("unused_signal")
@@ -39,8 +42,8 @@ signal rotated
 
 func update_slot(slot_index: int, symbolId: int) -> void: #This updates the array with the actual symbol on the slots
 	if slot_index == 0:
-		grid[2][3] = symbolId #This isn't zero cause its in the middle, just for more readability
-		grid[3][3] = symbolId
+		grid[2][2] = symbolId #This isn't zero cause its in the middle, just for more readability
+		grid[3][2] = symbolId
 	elif slot_index == 1:
 		grid[0][0] = symbolId
 		grid[1][0] = symbolId
@@ -94,6 +97,7 @@ func check_wins():
 	check_horizontal_win()
 	check_vertical_win()
 	check_diagonal_wins()
+	check_corners_win()
 
 func check_horizontal_win():
 	# First Line
@@ -199,14 +203,19 @@ func check_vertical_win():
 
 	# Sixth Column
 	if grid[2][4] == grid[3][4]:
-		if grid[2][4] == grid[1][4]:
-			if grid[2][4] == grid[4][4]:
+		if grid[2][4] == grid[1][3]:
+			if grid[2][4] == grid[4][3]:
 				coins += PAYOUTS[grid[2][4]][4]
 			else:
 				coins += PAYOUTS[grid[2][4]][3]
 
 func check_diagonal_wins():
 	if grid[0][0] == grid[2][2] and grid[2][2] == grid[5][3] or grid[0][3] == grid[2][2] and grid[2][2] == grid[5][0]:
-		coins += PAYOUTS[grid[0][0][5]] * 10
-	if grid[0][0] == grid[2][2] == grid[5][3] == grid[0][3] == grid[5][0]:
-		coins += PAYOUTS[grid[0][0][5]] * 100
+		coins += PAYOUTS[grid[0][0]][4]
+	elif grid[0][0] == grid[2][2] and grid[2][2] == grid[5][3] and grid[5][3] == grid[0][3] and grid[0][3] == grid[5][0]:
+		coins += PAYOUTS[grid[0][0]][4] * 10
+
+func check_corners_win():
+	if grid[0][0] == grid[0][3]:
+		if grid[5][0] == grid[5][3]:
+			coins += PAYOUTS[grid[5][3][4]] * 5

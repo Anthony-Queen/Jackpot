@@ -5,7 +5,7 @@ extends GridContainer
 @onready var Small4 = $Small16
 
 func _input(event):
-	if event.is_action_pressed("Down"):
+	if event.is_action_pressed("Down") and Globals.canMove:
 		rotate()
 
 func rotate():

@@ -89,7 +89,7 @@ offset_right = -0.32104492
 offset_bottom = 0.7589817
 grow_horizontal = 2
 grow_vertical = 2
-text = "Cost per Play: 10 Coins"
+text = "Cost per Play: 8 Coins"
 vertical_alignment = 1
 
 [node name="BIG1" type="PanelContainer" parent="." unique_id=1666524891]
