@@ -1,14 +1,15 @@
 extends GridContainer
+@onready var Small = $Small9
+@onready var Small2 = $Small10
+@onready var Small3 = $Small11
+@onready var Small4 = $Small12
+ 
 
 func _input(event):
 	if event.is_action_pressed("Right") and Globals.canMove:
 		rotate()
 
 func rotate():
-	var Small = $Small9
-	var Small2 = $Small10
-	var Small3 = $Small11
-	var Small4 = $Small12
 	rotation_degrees += 90
 	Small.pivot_offset = Small.size / 2
 	Small.rotation_degrees -= 90
@@ -18,4 +19,4 @@ func rotate():
 	Small3.rotation_degrees -= 90
 	Small4.pivot_offset = Small4.size / 2
 	Small4.rotation_degrees -= 90
-	Globals.rotated.emit()
+	Globals.rotated3.emit()

@@ -18,4 +18,4 @@ func rotate():
 	Small3.rotation_degrees -= 90
 	Small4.pivot_offset = Small4.size / 2
 	Small4.rotation_degrees -= 90
-	Globals.rotated.emit()
+	Globals.rotated4.emit()

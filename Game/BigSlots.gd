@@ -49,7 +49,12 @@ func _process(delta):
 func _input(event): 
 	if event is InputEventKey and event.pressed and event.keycode == KEY_ENTER:
 		Globals.canMove = false
-		_on_pressed()
+		if Globals.Enters < 5:
+			Globals.Enters += 1
+			_on_pressed()
+		else:
+			Globals.Enters = 0
+			print("Wow sho kool") #Replay logic here
 
 func _on_pressed():
 	set_process(false)
